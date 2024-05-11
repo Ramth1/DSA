@@ -1,10 +1,10 @@
 ### DSA
 1.Array
- -Array|Sorting
-  a. Bubble Sort
-  b. Selection Sort
-  c. Insertion Sort
-  d. Merge Sort
-  e. Quick Sort
-  f. Heap Sort
-  g. Counting Sort
+-Array|Sorting
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Merge Sort
+  - Quick Sort
+  - Heap Sort
+  - Counting Sort

@@ -29,9 +29,39 @@
 // console.log("sorted array")
 // printArray(array,n)
 
+
+
 // recursion selection sort
 function minIndex(a,i,j){
     if(i==j)
         return i;
+
+    //find minimum of remaining elements
+    var k=minIndex(a,i+1,j)
+
+    //return minimum of current and remaining
+    return (a[i]<a[k])?i:k
     
 }
+//recursive selection sort. n is size of a[] and index is index of starting element
+function recurSelectionSort(a,n,index=0){
+    //return when starting and size are same
+    if(index==n){
+        return;
+    }
+    //calling minimum index function for minimum index
+    var k=minIndex(a,index,n-1)
+
+    // swapping when index and minimum index are not same
+    if(k!=index){
+        [a[k],a[index]]=[a[index],a[k]]
+    }
+    //recursively calling selection sort function
+    recurSelectionSort(a,n,index+1)
+
+}
+let a=[34,23,64,3,1,56,9]
+let n=a.length
+console.log("sorted array using recursive selection sort")
+recurSelectionSort(a,n)
+console.log(a.join(' '))
